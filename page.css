@@ -22,7 +22,7 @@ time, mark, audio, video {
 /* 以上CSS reset */
 
 body{
-	padding:2em 6em 2em 6em;
+	padding:2em 8em 2em 8em;
 	font-family: Helvetica,Arial,微軟正黑體,sans-serif;
 }
 
@@ -33,4 +33,33 @@ body{
 
 .items{
 	padding:1rem 4rem 2rem 4rem;
+}
+
+.flowerIN{
+	display: flex;
+	justify-content: space-between;
+}
+
+.flowerIN div{
+	padding: 8.2rem;
+}
+
+.flowerONE{
+	background-image: url("https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+	background-size:cover;
+}
+
+.flowerTWO{
+	background-image: url("https://content.shopback.com/tw/wp-content/uploads/2020/01/07183211/plum-4917370_1280-1.jpg");
+	background-size: cover;
+}
+
+.flowerTR{
+	background-image: url("https://images.pexels.com/photos/4127852/pexels-photo-4127852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-size: cover;
+}
+
+.flowerFU{
+	background-image: url("https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-size: cover;
 }
