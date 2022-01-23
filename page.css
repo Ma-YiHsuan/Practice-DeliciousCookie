@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -42,3 +43,16 @@ table {
 	border-spacing: 0;
 }
 /* 以上CSS reset */
+
+body{
+	padding:2em 6em 2em 6em;
+}
+
+.navigate {
+	display:flex;
+	justify-content:center;
+}
+
+.items{
+	padding:1rem 4rem 2rem 4rem;
+}
