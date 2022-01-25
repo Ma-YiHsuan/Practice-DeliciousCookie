@@ -38,10 +38,18 @@ body{
 .flowerIN{
 	display: flex;
 	justify-content: space-between;
+	margin:7rem 0 2rem 0;
 }
 
 .flowerIN div{
-	padding: 8.2rem;
+	width: 16rem;
+	height: 16rem;
+	padding: 1rem;
+}
+
+.flowerIN p{
+	font-size: 2rem;
+	text-align: center;
 }
 
 .flowerONE{
