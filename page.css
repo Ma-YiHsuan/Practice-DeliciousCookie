@@ -63,3 +63,21 @@ body{
 	background-image: url("https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 	background-size: cover;
 }
+
+.section{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.blog img{
+	display: block;
+	width:25rem;
+	height: 16.65rem;
+}
+
+.blog{
+	width: 25rem;
+	height: 8rem;
+	margin:3rem 0;
+}
