@@ -24,6 +24,7 @@ time, mark, audio, video {
 body{
 	padding:2em 8em 2em 8em;
 	font-family: Helvetica,Arial,微軟正黑體,sans-serif;
+	background-color: rgb(255, 236, 247);
 }
 
 .navigate {
@@ -51,8 +52,9 @@ body{
 }
 
 .flowerIN a:hover{
-	filter:contrast(60%);
+	opacity: 0.75;
 	cursor: pointer;
+	color:#fff;
 }
 
 .flowerIN p{
