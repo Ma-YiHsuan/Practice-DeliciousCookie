@@ -24,7 +24,7 @@ time, mark, audio, video {
 body{
 	padding:2em 8em 2em 8em;
 	font-family: Helvetica,Arial,微軟正黑體,sans-serif;
-	background-color: rgb(255, 236, 247);
+	background-color: rgb(255, 247, 242);
 }
 
 .navigate {
@@ -51,6 +51,10 @@ body{
 	align-items: center;
 }
 
+.flowerIN a{
+	transition: opacity .3s;
+}
+
 .flowerIN a:hover{
 	opacity: 0.75;
 	cursor: pointer;
@@ -72,6 +76,7 @@ body{
 	width: 100%;
 	height: 3px;
 	z-index: 1;
+	transition: transform .2s;
 }
 
 .flowerIN p::after{
@@ -83,6 +88,17 @@ body{
 	width: 100%;
 	height: 3px;
 	z-index: 1;
+	transition: transform .2s;
+}
+
+.flowerIN a:hover p::before{
+	transform:translate(-4px,26.8px) rotate(45deg);
+	
+}
+
+.flowerIN a:hover p::after{
+	transform:translate(-4px,-26.8px) rotate(-45deg);
+	
 }
 
 .flowerONE{
