@@ -161,8 +161,8 @@ main{
 
 .blog img{
 	display: block;
-	width:25rem;
-	height: 16.65rem;
+	width:100%;
+	height: auto;
 }
 
 .blog{
@@ -208,4 +208,21 @@ article a{
 
 article a:hover,.blog a:hover{
 	color:rgb(184, 176, 176);
+}
+
+@media (min-width:1700px){
+	.blog{
+		font-size: 1.2rem;
+		width: 30rem;
+		height: 33rem;
+	}
+	.blog a{
+		font-size: 1.5rem;
+	}
+
+	article a{
+		letter-spacing: 1.2px;
+		font-weight: 400;
+		font-size: 1.5rem;
+	}
 }
