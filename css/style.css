@@ -13,6 +13,68 @@ html {
 }
 
 body {
+  background-color: #EC6D4E;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 300;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbar__pages {
+  width: 30rem;
+}
+.navbar__pages-list {
+  list-style: none;
+}
+.navbar__pages-list li {
+  display: inline;
+}
+.navbar__pages-list--style {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar__logo {
+  width: 25rem;
+}
+.navbar__logo--style {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar__client {
+  width: 10rem;
+}
+.navbar__client--style {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header {
+  height: calc(100vh + 200px);
+  color: #fff;
+}
+.header__logo-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-25%, -50%);
+}
+
+.heading-primery {
+  display: inline-block;
+  text-align: center;
+}
+.heading-primery--main {
+  display: block;
+}
+.heading-primery--sub {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

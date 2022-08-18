@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__pages {
+        width: 30rem;
+    
+        &-list {
+            list-style: none;
+            li {
+                display: inline;
+            }
+            &--style {
+                @include navLink;
+            }
+        }
+    }
+
+    &__logo {
+        width: 25rem;
+        &--style {
+            @include navLink;
+        }
+    }
+
+    &__client {
+        width: 10rem;
+        &--style {
+            @include navLink;
+        }
+    }
+}
