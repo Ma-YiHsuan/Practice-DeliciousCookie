@@ -18,10 +18,47 @@ body {
   font-weight: 300;
 }
 
+@-webkit-keyframes picAnime-main {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes picAnime-main {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes picAnime-sub {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes picAnime-sub {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: #EC6D4E;
 }
 .navbar__pages {
   width: 30rem;
@@ -52,10 +89,10 @@ body {
 }
 
 .header {
-  height: calc(100vh + 200px);
   color: #fff;
 }
 .header__logo-box {
+  z-index: 3;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,8 +101,8 @@ body {
 .header__text-box {
   position: absolute;
   top: 50%;
-  left: 25%;
-  transform: translate(-25%, -50%);
+  left: 15%;
+  transform: translate(-15%, -50%);
 }
 
 .heading-primery {
@@ -77,4 +114,75 @@ body {
 }
 .heading-primery--sub {
   display: block;
+}
+
+.pic-style {
+  height: 70rem;
+}
+.pic-style1 {
+  background-image: url("https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+  display: inline-block;
+  width: 45rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1.5rem;
+}
+.pic-style2 {
+  background-image: url("https://images.unsplash.com/photo-1607919965349-c3c790913de7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+  display: inline-block;
+  width: 45rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1.5rem;
+}
+.pic-style3 {
+  background-image: url("https://images.unsplash.com/photo-1607919565317-3ab3dd5abafd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+  display: inline-block;
+  width: 45rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1.5rem;
+}
+.pic-style4 {
+  background-image: url("https://images.unsplash.com/photo-1607920592831-f68bbee49939?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+  display: inline-block;
+  width: 45rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1.5rem;
+}
+.pic-style5 {
+  background-image: url("https://images.unsplash.com/photo-1607919966225-12386ac398b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+  display: inline-block;
+  width: 45rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1.5rem;
+}
+
+.pic__runanim-box {
+  width: 70vw;
+  overflow: hidden;
+  white-space: nowrap;
+  float: right;
+}
+.pic__runanim-box .scroll {
+  display: inline-block;
+}
+.pic__runanim-box .scr-main {
+  -webkit-animation: picAnime-main 60s linear infinite;
+          animation: picAnime-main 60s linear infinite;
+  -webkit-animation-delay: -60s;
+          animation-delay: -60s;
+}
+.pic__runanim-box .scr-sub {
+  -webkit-animation: picAnime-sub 60s linear infinite;
+          animation: picAnime-sub 60s linear infinite;
+  -webkit-animation-delay: -30s;
+          animation-delay: -30s;
 }/*# sourceMappingURL=style.css.map */

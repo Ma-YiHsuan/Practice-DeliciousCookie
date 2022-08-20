@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: $color-primary;
 
     &__pages {
         width: 30rem;

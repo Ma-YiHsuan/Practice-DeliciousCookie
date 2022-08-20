@@ -1,30 +1,76 @@
 .header {
-    height: calc(100vh + 200px); 
     color: $color-white;
-
-    &__logo-box{
+    &__logo-box {
+        z-index: 3;
         position: absolute;
-        top:50%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
-    &__text-box{
+    &__text-box {
         position: absolute;
-        top:50%;
-        left:25%;
-        transform: translate(-25%,-50%);
+        top: 50%;
+        left: 15%;
+        transform: translate(-15%, -50%);
     }
 }
 
 .heading-primery {
     display: inline-block;
     text-align: center;
+
     &--main {
         display: block;
     }
 
-    &--sub{
+    &--sub {
         display: block;
+    }
+}
+
+.pic-style {
+    height: 70rem;
+    &1 {
+        background-image: url("https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+        @include animaPic;
+    }
+
+    &2 {
+        background-image: url("https://images.unsplash.com/photo-1607919965349-c3c790913de7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+        @include animaPic;
+    }
+
+    &3 {
+        background-image: url("https://images.unsplash.com/photo-1607919565317-3ab3dd5abafd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+        @include animaPic;
+    }
+
+    &4 {
+        background-image: url("https://images.unsplash.com/photo-1607920592831-f68bbee49939?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+        @include animaPic;
+    }
+
+    &5 {
+        background-image: url("https://images.unsplash.com/photo-1607919966225-12386ac398b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+        @include animaPic;
+    }
+}
+
+.pic__runanim-box {
+    width: 70vw;
+    overflow: hidden;
+    white-space: nowrap;
+    float: right;
+    .scroll {
+        display: inline-block;
+    }
+    .scr-main {
+        animation: picAnime-main 60s linear infinite;
+        animation-delay: -60s;
+    }
+    .scr-sub {
+        animation: picAnime-sub 60s linear infinite;
+        animation-delay: -30s;
     }
 }

@@ -2,3 +2,30 @@
     text-decoration: none;
     color: $color-white;
 }
+
+@mixin animaPic {
+    display: inline-block;
+    width: 45rem;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 1.5rem;
+}
+
+@keyframes picAnime-main {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes picAnime-sub {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
