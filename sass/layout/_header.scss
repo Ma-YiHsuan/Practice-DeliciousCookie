@@ -82,11 +82,11 @@
         display: inline-block;
     }
     .scr-main {
-        animation: picAnime-main 60s linear infinite;
-        animation-delay: -60s;
+        animation: picAnime-main 100s linear infinite;
+        animation-delay: -100s;
     }
     .scr-sub {
-        animation: picAnime-sub 60s linear infinite;
-        animation-delay: -30s;
+        animation: picAnime-sub 100s linear infinite;
+        animation-delay: -50s;
     }
 }

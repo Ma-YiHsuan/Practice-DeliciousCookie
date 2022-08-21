@@ -209,14 +209,14 @@ body {
   display: inline-block;
 }
 .pic__runanim-box .scr-main {
-  -webkit-animation: picAnime-main 60s linear infinite;
-          animation: picAnime-main 60s linear infinite;
-  -webkit-animation-delay: -60s;
-          animation-delay: -60s;
+  -webkit-animation: picAnime-main 100s linear infinite;
+          animation: picAnime-main 100s linear infinite;
+  -webkit-animation-delay: -100s;
+          animation-delay: -100s;
 }
 .pic__runanim-box .scr-sub {
-  -webkit-animation: picAnime-sub 60s linear infinite;
-          animation: picAnime-sub 60s linear infinite;
-  -webkit-animation-delay: -30s;
-          animation-delay: -30s;
+  -webkit-animation: picAnime-sub 100s linear infinite;
+          animation: picAnime-sub 100s linear infinite;
+  -webkit-animation-delay: -50s;
+          animation-delay: -50s;
 }/*# sourceMappingURL=style.css.map */
