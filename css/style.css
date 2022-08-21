@@ -58,13 +58,18 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  z-index: 5;
   background-color: #EC6D4E;
 }
 .navbar__pages {
-  width: 30rem;
+  width: 25%;
+  padding-left: 4rem;
+  align-self: center;
 }
 .navbar__pages-list {
   list-style: none;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 .navbar__pages-list li {
   display: inline;
@@ -72,24 +77,38 @@ body {
 .navbar__pages-list--style {
   text-decoration: none;
   color: #fff;
+  margin-right: 1rem;
 }
 .navbar__logo {
-  width: 25rem;
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+  align-self: center;
 }
 .navbar__logo--style {
   text-decoration: none;
   color: #fff;
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
 }
 .navbar__client {
-  width: 10rem;
+  width: 25%;
+  padding-right: 4rem;
+  align-self: center;
+  text-align: end;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 .navbar__client--style {
   text-decoration: none;
   color: #fff;
+  margin-left: 1rem;
 }
 
 .header {
   color: #fff;
+  height: 95rem;
 }
 .header__logo-box {
   z-index: 3;
@@ -102,7 +121,16 @@ body {
   position: absolute;
   top: 50%;
   left: 15%;
-  transform: translate(-15%, -50%);
+  transform: translate(-50%, -50%);
+}
+.header__text-box .slogan {
+  display: inline-block;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
 }
 
 .heading-primery {
@@ -111,9 +139,15 @@ body {
 }
 .heading-primery--main {
   display: block;
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
 }
 .heading-primery--sub {
   display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.5rem;
 }
 
 .pic-style {

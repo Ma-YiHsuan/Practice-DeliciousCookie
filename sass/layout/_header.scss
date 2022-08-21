@@ -1,5 +1,6 @@
 .header {
     color: $color-white;
+    height: 95rem;
     &__logo-box {
         z-index: 3;
         position: absolute;
@@ -12,7 +13,16 @@
         position: absolute;
         top: 50%;
         left: 15%;
-        transform: translate(-15%, -50%);
+        transform: translate(-50%, -50%);
+
+        .slogan {
+            display: inline-block;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: $font-size4;
+            font-weight: 400;
+            letter-spacing: 1rem;
+        }
     }
 }
 
@@ -22,10 +32,16 @@
 
     &--main {
         display: block;
+        font-size: $font-size1;
+        font-weight: 700;
+        letter-spacing: .5rem;
     }
 
     &--sub {
         display: block;
+        font-size: $font-size5;
+        font-weight: 400;
+        letter-spacing: 1.5rem;
     }
 }
 
