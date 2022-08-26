@@ -1,6 +1,8 @@
 .header {
     color: $color-white;
-    height: 95rem;
+    height: 70rem;
+    margin-bottom: $m-mid;
+
     &__logo-box {
         z-index: 3;
         position: absolute;
@@ -82,11 +84,11 @@
         display: inline-block;
     }
     .scr-main {
-        animation: picAnime-main 100s linear infinite;
+        animation: runAnime-main 100s linear infinite;
         animation-delay: -100s;
     }
     .scr-sub {
-        animation: picAnime-sub 100s linear infinite;
+        animation: runAnime-sub 100s linear infinite;
         animation-delay: -50s;
     }
 }

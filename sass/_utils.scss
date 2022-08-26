@@ -12,7 +12,7 @@
     margin-right: 1.5rem;
 }
 
-@keyframes picAnime-main {
+@keyframes runAnime-main {
     0% {
         transform: translateX(100%);
     }
@@ -21,7 +21,7 @@
     }
 }
 
-@keyframes picAnime-sub {
+@keyframes runAnime-sub {
     0% {
         transform: translateX(0);
     }
