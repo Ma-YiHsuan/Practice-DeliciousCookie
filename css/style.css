@@ -18,7 +18,7 @@ body {
   font-weight: 300;
 }
 
-@-webkit-keyframes picAnime-main {
+@-webkit-keyframes runAnime-main {
   0% {
     transform: translateX(100%);
   }
@@ -27,7 +27,7 @@ body {
   }
 }
 
-@keyframes picAnime-main {
+@keyframes runAnime-main {
   0% {
     transform: translateX(100%);
   }
@@ -35,7 +35,7 @@ body {
     transform: translateX(-100%);
   }
 }
-@-webkit-keyframes picAnime-sub {
+@-webkit-keyframes runAnime-sub {
   0% {
     transform: translateX(0);
   }
@@ -43,7 +43,7 @@ body {
     transform: translateX(-200%);
   }
 }
-@keyframes picAnime-sub {
+@keyframes runAnime-sub {
   0% {
     transform: translateX(0);
   }
@@ -108,7 +108,8 @@ body {
 
 .header {
   color: #fff;
-  height: 95rem;
+  height: 70rem;
+  margin-bottom: 5rem;
 }
 .header__logo-box {
   z-index: 3;
@@ -209,14 +210,93 @@ body {
   display: inline-block;
 }
 .pic__runanim-box .scr-main {
-  -webkit-animation: picAnime-main 100s linear infinite;
-          animation: picAnime-main 100s linear infinite;
+  -webkit-animation: runAnime-main 100s linear infinite;
+          animation: runAnime-main 100s linear infinite;
   -webkit-animation-delay: -100s;
           animation-delay: -100s;
 }
 .pic__runanim-box .scr-sub {
-  -webkit-animation: picAnime-sub 100s linear infinite;
-          animation: picAnime-sub 100s linear infinite;
+  -webkit-animation: runAnime-sub 100s linear infinite;
+          animation: runAnime-sub 100s linear infinite;
   -webkit-animation-delay: -50s;
           animation-delay: -50s;
+}
+
+.aboutMe {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.aboutMe__img {
+  width: 95%;
+  height: 80vh;
+  margin: 0 2.5%;
+  background-image: url("https://images.unsplash.com/photo-1500511599662-5441d83fae18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  background-position: left;
+  text-align: center;
+  padding-top: 4rem;
+}
+.aboutMe__img-title {
+  color: #EC6D4E;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.aboutMe__text {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 50rem;
+  padding: 4rem;
+  background-color: #fff;
+  color: #EC6D4E;
+  border-radius: 5px;
+}
+.aboutMe__text h3 {
+  font-size: 3.5rem;
+  margin: 5rem 0;
+  letter-spacing: 1rem;
+}
+.aboutMe__text p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 4rem;
+}
+.aboutMe__text p:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.picWithText {
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 5rem;
+  background-image: url("https://images.unsplash.com/photo-1584847801423-852691e41bc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+.picWithText-style {
+  font-family: "Arial", sans-serif;
+  font-size: 8rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+}
+.picWithText-style .scroll {
+  display: inline-block;
+}
+.picWithText-style .scr-main {
+  -webkit-animation: runAnime-main 90s linear infinite;
+          animation: runAnime-main 90s linear infinite;
+  -webkit-animation-delay: -90s;
+          animation-delay: -90s;
+}
+.picWithText-style .scr-sub {
+  -webkit-animation: runAnime-sub 90s linear infinite;
+          animation: runAnime-sub 90s linear infinite;
+  -webkit-animation-delay: -45s;
+          animation-delay: -45s;
 }/*# sourceMappingURL=style.css.map */
