@@ -12,6 +12,20 @@
     margin-right: 1.5rem;
 }
 
+@mixin scroll-All ($sec) {
+    .scroll {
+        display: inline-block;
+    }
+    .scr-main {
+        animation: runAnime-main $sec linear infinite;
+        animation-delay: -$sec;
+    }
+    .scr-sub {
+        animation: runAnime-sub $sec linear infinite;
+        animation-delay: calc((0s - $sec) / 2);
+    }
+}
+
 @keyframes runAnime-main {
     0% {
         transform: translateX(100%);

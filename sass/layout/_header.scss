@@ -80,15 +80,5 @@
     overflow: hidden;
     white-space: nowrap;
     float: right;
-    .scroll {
-        display: inline-block;
-    }
-    .scr-main {
-        animation: runAnime-main 100s linear infinite;
-        animation-delay: -100s;
-    }
-    .scr-sub {
-        animation: runAnime-sub 100s linear infinite;
-        animation-delay: -50s;
-    }
+    @include scroll-All(100s);
 }
