@@ -15,15 +15,12 @@
         &-list {
             list-style: none;
             font-size: $font-default-size;
-            font-weight: 400;
-
-            li {
-                display: inline;
-            }
+            font-weight: 700;
 
             &--style {
-                @include navLink;
                 margin-right: 1rem;
+                @include navLink;
+                @include slotEffect;
             }
         }
     }
@@ -48,11 +45,12 @@
         align-self: center;
         text-align: end;
         font-size: $font-default-size;
-        font-weight: 400;
+        font-weight: 700;
 
         &--style {
-            @include navLink;
             margin-left: 1rem;
+            @include navLink;
+            @include slotEffect;
         }
     }
 }

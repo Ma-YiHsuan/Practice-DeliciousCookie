@@ -69,15 +69,28 @@ body {
 .navbar__pages-list {
   list-style: none;
   font-size: 1.6rem;
-  font-weight: 400;
-}
-.navbar__pages-list li {
-  display: inline;
+  font-weight: 700;
 }
 .navbar__pages-list--style {
+  margin-right: 1rem;
   text-decoration: none;
   color: #fff;
-  margin-right: 1rem;
+  display: inline-block;
+  overflow: hidden;
+}
+.navbar__pages-list--style .slot-content {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s;
+}
+.navbar__pages-list--style .slot-content::after {
+  content: attr(hidden-slot-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.navbar__pages-list--style:hover .slot-content {
+  transform: translateY(-100%);
 }
 .navbar__logo {
   width: 50%;
@@ -98,12 +111,28 @@ body {
   align-self: center;
   text-align: end;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 .navbar__client--style {
+  margin-left: 1rem;
   text-decoration: none;
   color: #fff;
-  margin-left: 1rem;
+  display: inline-block;
+  overflow: hidden;
+}
+.navbar__client--style .slot-content {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s;
+}
+.navbar__client--style .slot-content::after {
+  content: attr(hidden-slot-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.navbar__client--style:hover .slot-content {
+  transform: translateY(-100%);
 }
 
 .header {

@@ -3,6 +3,29 @@
     color: $color-white;
 }
 
+@mixin slotEffect {
+    display: inline-block;
+    overflow: hidden;
+         .slot-content {
+            display: inline-block;
+            position: relative;
+            transition: all .3s;
+
+            &::after{
+                 content:attr(hidden-slot-text);
+                 position: absolute;
+                 top: 100%;
+                 left: 0;
+            }
+        }
+
+        &:hover {
+            .slot-content {
+                transform: translateY(-100%);
+             }
+        }
+}
+
 @mixin animaPic {
     display: inline-block;
     width: 45rem;
