@@ -55,6 +55,7 @@
     background-size: cover;
     position: relative;
     z-index: -1;
+    overflow: hidden;
 
     &-style {
         font-family: 'Arial', sans-serif;

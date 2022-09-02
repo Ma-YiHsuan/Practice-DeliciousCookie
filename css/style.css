@@ -302,6 +302,7 @@ body {
   background-size: cover;
   position: relative;
   z-index: -1;
+  overflow: hidden;
 }
 .picWithText-style {
   font-family: "Arial", sans-serif;
