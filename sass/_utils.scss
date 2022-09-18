@@ -1,68 +1,101 @@
 @mixin navLink {
-    text-decoration: none;
-    color: $color-white;
+	text-decoration: none;
+	color: $color-white;
 }
 
 @mixin slotEffect {
-    display: inline-block;
-    overflow: hidden;
-         .slot-content {
-            display: inline-block;
-            position: relative;
-            transition: all .3s;
+	display: inline-block;
+	overflow: hidden;
+	.slot-content {
+		display: inline-block;
+		position: relative;
+		transition: all 0.3s;
 
-            &::after{
-                 content:attr(hidden-slot-text);
-                 position: absolute;
-                 top: 100%;
-                 left: 0;
-            }
-        }
+		&::after {
+			content: attr(hidden-slot-text);
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+	}
 
-        &:hover {
-            .slot-content {
-                transform: translateY(-100%);
-             }
-        }
+	&:hover {
+		.slot-content {
+			transform: translateY(-100%);
+		}
+	}
 }
 
 @mixin animaPic {
-    display: inline-block;
-    width: 45rem;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    margin-right: 1.5rem;
+	display: inline-block;
+	width: 45rem;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	margin-right: 1.5rem;
 }
 
-@mixin scroll-All ($sec) {
-    .scroll {
-        display: inline-block;
-    }
-    .scr-main {
-        animation: runAnime-main $sec linear infinite;
-        animation-delay: -$sec;
-    }
-    .scr-sub {
-        animation: runAnime-sub $sec linear infinite;
-        animation-delay: calc((0s - $sec) / 2);
-    }
+@mixin scroll-All($sec) {
+	.scroll {
+		display: inline-block;
+	}
+	.scr-main {
+		animation: runAnime-main $sec linear infinite;
+		animation-delay: -$sec;
+	}
+	.scr-sub {
+		animation: runAnime-sub $sec linear infinite;
+		animation-delay: calc((0s - $sec) / 2);
+	}
 }
 
 @keyframes runAnime-main {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }
 
 @keyframes runAnime-sub {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-200%);
-    }
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-200%);
+	}
+}
+
+.bigOne {
+	width: 100vw;
+	height: 100rem;
+}
+
+@keyframes UP-picroll {
+	0% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(-35%);
+	}
+}
+
+@keyframes DOWN-picroll {
+	0% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(-5%);
+	}
+}
+
+.upSytle {
+	animation: UP-picroll 2s linear;
+	animation-fill-mode: forwards;
+}
+
+.downStyle {
+	animation: DOWN-picroll 2s linear;
+	animation-fill-mode: forwards;
 }

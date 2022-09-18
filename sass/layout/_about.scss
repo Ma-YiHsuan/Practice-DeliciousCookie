@@ -1,73 +1,77 @@
 .aboutMe {
-    position: relative;
-    margin-bottom: $m-mid;
+	position: relative;
+	margin-bottom: $m-mid;
 
-    &__img{
-        width: 95%;
-        height: 80vh;
-        margin: 0 2.5%;
-        background-image: url("https://images.unsplash.com/photo-1500511599662-5441d83fae18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-        background-size: cover;
-        background-position: left;
-        text-align: center;
-        padding-top: $p-mid;
+	&__img {
+		width: 95%;
+		height: 80vh;
+		margin: 0 2.5%;
+		background-image: url('https://images.unsplash.com/photo-1500511599662-5441d83fae18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+		background-size: cover;
+		background-position: left;
+		text-align: center;
+		padding-top: $p-mid;
 
-        &-title {
-            color: $color-primary;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-    }
+		&-title {
+			color: $color-primary;
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+	}
 
-    &__text {
-        position: absolute;
-        top: 30%;
-        left: 20%;
-        width: 50rem;
-        padding: $p-mid;
-        background-color: $color-white;
-        color: $color-primary;
-        border-radius: 5px;
+	&__text {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+		width: 50rem;
+		padding: $p-mid;
+		background-color: $color-white;
+		color: $color-primary;
+		border-radius: 5px;
 
-        h3 {
-            font-size: $font-size3;
-            margin: $m-mid 0;
-            letter-spacing: 1rem;
-        }
+		h3 {
+			font-size: $font-size3;
+			margin: $m-mid 0;
+			letter-spacing: 1rem;
+		}
 
-        p {
-            font-size: $font-default-size;
-            font-weight: 400;
-            line-height: 4rem;
+		p {
+			font-size: $font-default-size;
+			font-weight: 400;
+			line-height: 4rem;
 
-            &:not(:last-child){
-                margin-bottom: $m-mid;
-            }
-        }
-    }
+			&:not(:last-child) {
+				margin-bottom: $m-mid;
+			}
+		}
+	}
 }
 
 .picWithText {
-    width: 100%;
-    height: 80vh;
-    margin-bottom: $m-mid;
-    background-image: url("https://images.unsplash.com/photo-1584847801423-852691e41bc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    background-size: cover;
-    position: relative;
-    z-index: -1;
-    overflow: hidden;
+	width: 100%;
+	height: 80vh;
+	margin-bottom: $m-mid;
+	overflow: hidden;
+	position: relative;
+	z-index: -1;
 
-    &-style {
-        font-family: 'Arial', sans-serif;
-        font-size: $font-size1;
-        font-weight: 400;
-        color: $color-white;
-        letter-spacing: 3px;
-        overflow: hidden;
-        white-space: nowrap;
-        position: absolute;
-        bottom: 0;
+	&-Picstyle {
+		width: 100%;
+		height: calc(100% + 400px);
+		background-image: url('https://images.unsplash.com/photo-1584847801423-852691e41bc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+		background-size: cover;
+	}
 
-        @include scroll-All(90s)
-    }
+	&-Textstyle {
+		font-family: 'Arial', sans-serif;
+		font-size: $font-size1;
+		font-weight: 400;
+		color: $color-white;
+		letter-spacing: 3px;
+		white-space: nowrap;
+		position: absolute;
+		bottom: 0;
+
+		@include scroll-All(90s);
+	}
 }
