@@ -68,16 +68,16 @@
 }
 
 .bigOne {
-	width: 100vw;
+	width: 100%;
 	height: 100rem;
 }
 
 @keyframes UP-picroll {
 	0% {
-		transform: translateY(-20%);
+		transform: translateY(-10%);
 	}
 	100% {
-		transform: translateY(-35%);
+		transform: translateY(-20%);
 	}
 }
 
@@ -86,16 +86,16 @@
 		transform: translateY(-20%);
 	}
 	100% {
-		transform: translateY(-5%);
+		transform: translateY(-10%);
 	}
 }
 
 .upSytle {
-	animation: UP-picroll 2s linear;
+	animation: UP-picroll 0.7s linear;
 	animation-fill-mode: forwards;
 }
 
 .downStyle {
-	animation: DOWN-picroll 2s linear;
+	animation: DOWN-picroll 0.7s linear;
 	animation-fill-mode: forwards;
 }
