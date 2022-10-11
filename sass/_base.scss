@@ -1,19 +1,23 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
 html {
-    /* 10px / 16px = 0.625 */
-    font-size: 62.5%;   
-    box-sizing: border-box;
+	/* 10px / 16px = 0.625 */
+	font-size: 62.5%;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: $color-primary;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 300;
+	background-color: $color-primary;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
+}
+
+[v-cloak] {
+	display: none;
 }
