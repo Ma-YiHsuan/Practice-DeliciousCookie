@@ -1,0 +1,84 @@
+.carousel {
+	margin-bottom: $m-mid;
+
+	&-box {
+		position: relative;
+		height: 70rem;
+		margin: 0 $m-lag;
+		padding-top: $p-lag;
+		padding-bottom: $p-lag;
+	}
+
+	&-heading {
+		font-size: $font-size4;
+		font-weight: 100;
+		letter-spacing: 3px;
+		color: $color-white;
+		text-align: center;
+
+		&--num {
+			float: right;
+		}
+	}
+
+	&-container {
+		margin-top: $m-mid;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	&-content {
+		display: inline-block;
+		height: 40rem;
+		width: 60rem;
+		border-radius: 10px;
+		background-color: $color-white;
+
+		&:not(:last-child) {
+			margin-right: $m-sml;
+		}
+	}
+
+	&-butLeft {
+		position: absolute;
+		top: 35rem;
+	}
+
+	&-butRight {
+		position: absolute;
+		top: 35rem;
+		right: 0;
+	}
+}
+
+/* 輪播滾動按鈕CSS樣式 */
+/* 來源：https://design-library.jp/lab/ */
+.dli-chevron-right {
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	line-height: 1;
+	width: 1em;
+	height: 1em;
+	border: 0.1em solid currentColor;
+	border-left: 0;
+	border-bottom: 0;
+	box-sizing: border-box;
+	transform: translateX(-25%) rotate(45deg);
+}
+
+.dli-chevron-left {
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	line-height: 1;
+	width: 1em;
+	height: 1em;
+	border: 0.1em solid currentColor;
+	border-left: 0;
+	border-bottom: 0;
+	box-sizing: border-box;
+	transform: translateX(25%) rotate(-135deg);
+}

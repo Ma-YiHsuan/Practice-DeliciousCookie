@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -13,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #EC6D4E;
+  background-color: #ec6d4e;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 300;
 }
@@ -63,7 +64,7 @@ body {
   position: sticky;
   top: 0px;
   z-index: 5;
-  background-color: #EC6D4E;
+  background-color: #ec6d4e;
 }
 .navbar__pages {
   width: 25%;
@@ -270,7 +271,7 @@ body {
   padding-top: 4rem;
 }
 .aboutMe__img-title {
-  color: #EC6D4E;
+  color: #ec6d4e;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -281,7 +282,7 @@ body {
   width: 50rem;
   padding: 4rem;
   background-color: #fff;
-  color: #EC6D4E;
+  color: #ec6d4e;
   border-radius: 5px;
 }
 .aboutMe__text h3 {
@@ -337,4 +338,81 @@ body {
           animation: runAnime-sub 90s linear infinite;
   -webkit-animation-delay: -45s;
           animation-delay: -45s;
+}
+
+.carousel {
+  margin-bottom: 5rem;
+}
+.carousel-box {
+  position: relative;
+  height: 70rem;
+  margin: 0 10rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.carousel-heading {
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #fff;
+  text-align: center;
+}
+.carousel-heading--num {
+  float: right;
+}
+.carousel-container {
+  margin-top: 5rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.carousel-content {
+  display: inline-block;
+  height: 40rem;
+  width: 60rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.carousel-content:not(:last-child) {
+  margin-right: 2rem;
+}
+.carousel-butLeft {
+  position: absolute;
+  top: 35rem;
+}
+.carousel-butRight {
+  position: absolute;
+  top: 35rem;
+  right: 0;
+}
+
+/* 輪播滾動按鈕CSS樣式 */
+/* 來源：https://design-library.jp/lab/ */
+.dli-chevron-right {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+  transform: translateX(-25%) rotate(45deg);
+}
+
+.dli-chevron-left {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+  transform: translateX(25%) rotate(-135deg);
 }/*# sourceMappingURL=style.css.map */
