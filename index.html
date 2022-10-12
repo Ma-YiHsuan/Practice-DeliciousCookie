@@ -94,7 +94,7 @@
                 </div>
             </section>
             <section class="picWithText">
-                <div class="picWithText-Picstyle" :style="{ transform: 'translate3d('+ '0px,' + translateY + 'px, 0px)' }" v-cloak></div>
+                <scroll-pic-comp :scrollpos="scrollPos" :startpoint="startPoint" v-cloak></scroll-pic-comp>
                 <div class="picWithText-Textstyle">
                     <div class="scroll scr-main">
                         Apple. <span>Cinnamon. </span>Fig. <span>Almond. </span>Orange. <span>Chocolate.
@@ -108,17 +108,9 @@
                     </div>
                 </div>
             </section>
-            <section id="carousel" class="carousel" style="height: 700px;">
+            <section class="carousel">
                 <div class="carousel-box">
-                    <div class="carousel-heading">
-                        <h3>
-                            <span>餅乾產品</span>
-                            <span>1/4</span>
-                        </h3>
-                    </div>
-                    <div class="carousel-container">
-                        <div></div>
-                    </div>
+                    <carousel-comp></carousel-comp>
                 </div>
             </section>
     </div>
