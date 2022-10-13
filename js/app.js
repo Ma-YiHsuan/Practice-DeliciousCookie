@@ -7,6 +7,7 @@ const app = createApp({
 		return {
 			scrollPos: 0,
 			startPoint: 895,
+			footerList: ['常見Q&A', '關於我們', '意見回報', '合作提案', '服務條款'],
 		};
 	},
 	mounted() {

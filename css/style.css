@@ -7,6 +7,16 @@
   box-sizing: inherit;
 }
 
+*::-moz-selection {
+  color: #fff;
+  background-color: #c9684f;
+}
+
+*::selection {
+  color: #fff;
+  background-color: #c9684f;
+}
+
 html {
   /* 10px / 16px = 0.625 */
   font-size: 62.5%;
@@ -388,7 +398,7 @@ body {
 
 /* carousel基礎樣式 */
 .carousel {
-  padding-top: 4rem;
+  padding: 6rem 0;
   position: relative;
 }
 .carousel-heading {
@@ -498,4 +508,43 @@ body {
 }
 .dli-chevron-left:hover {
   transform: translateX(25%) rotate(-135deg) scale(1.5);
+}
+
+.footer-listBox {
+  margin: 2rem 0;
+  text-align: center;
+}
+.footer-list {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.footer-list > a {
+  display: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.footer-list > a:hover {
+  text-decoration: underline;
+  transform: translateY(2px);
+}
+.footer-list:not(:last-child)::after {
+  content: "|";
+  padding: 0 1rem;
+  display: inline-block;
+  transform: translateY(-2px);
+}
+.footer-copyBox {
+  text-align: center;
+  color: #fff;
+  opacity: 0.6;
+  margin: 5rem 0;
+}
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-right: 5rem;
 }/*# sourceMappingURL=style.css.map */

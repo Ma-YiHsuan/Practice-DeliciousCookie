@@ -111,8 +111,19 @@
             <section class="carousel">
                 <carousel-comp></carousel-comp>
             </section>
+        </main>
+        <footer>
+            <div class="footer-listBox">
+                <span v-for="item of footerList" class="footer-list" v-cloak>
+                    <a href="#">{{ item }}</a>
+                </span>
+            </div>
+            <div class="footer-copyBox">
+                <span class="footer-logo">好吃的餅乾</span>
+                <span v-cloak>{{ '&copy;' + new Date().getFullYear() }} 好吃的餅乾</span>
+            </div>
+        </footer>
     </div>
-    </main>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js'
         integrity='sha512-lIKG1kC5TMb1Zx32vdz1n31YJMZRknVY20U9MJ28hD3y2c0OKN0Ce5NhJji78v8zX5UOSsm+MTBOcJt7yMBnSg=='
