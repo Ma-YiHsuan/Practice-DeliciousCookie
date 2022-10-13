@@ -28,7 +28,7 @@ const carouselComp = {
 	template: `
 		<h3 class="carousel-heading">
 		餅乾產品
-			<span class="carousel-heading--num">1/4</span>
+			<span class="carousel-heading--num">{{ curIndex + 1 }}/{{ cards.length }}</span>
 		</h3>
 		<span class="dli-chevron-left carousel-butLeft" @click="slide(-1)"></span>
 		<transition-group :name="transMove" tag="div" class="carousel-box" v-cloak>
