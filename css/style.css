@@ -340,17 +340,59 @@ body {
           animation-delay: -45s;
 }
 
-.carousel {
-  margin-bottom: 5rem;
+/* 輪播滾動Vue動態樣式 */
+/* fade in(初始) */
+.fade-enter-from {
+  opacity: 0;
 }
-.carousel-box {
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: opacity 0.3s;
+}
+
+/* move next */
+.move-next-enter-from {
+  transform: translate(100%);
+  opacity: 0;
+}
+.move-next-enter-to, .move-next-leave-from {
+  transform: translate(0);
+  opacity: 1;
+}
+.move-next-leave-to {
+  transform: translate(-100%);
+  opacity: 0;
+}
+.move-next-move, .move-next-enter-active, .move-next-leave-active {
+  transition: all 0.5s;
+}
+
+/* move prev */
+.move-prev-enter-from {
+  transform: translate(-100%);
+  opacity: 0;
+}
+.move-prev-enter-to, .move-prev-leave-from {
+  transform: translate(0);
+  opacity: 1;
+}
+.move-prev-leave-to {
+  transform: translate(100%);
+  opacity: 0;
+}
+.move-prev-move, .move-prev-enter-active, .move-prev-leave-active {
+  transition: all 0.5s;
+}
+
+/* carousel基礎樣式 */
+.carousel {
+  padding-top: 4rem;
   position: relative;
-  height: 70rem;
-  margin: 0 10rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 .carousel-heading {
+  margin-left: 15.5rem;
   font-size: 3rem;
   font-weight: 100;
   letter-spacing: 3px;
@@ -359,32 +401,65 @@ body {
 }
 .carousel-heading--num {
   float: right;
+  margin-right: 15.5rem;
 }
-.carousel-container {
-  margin-top: 5rem;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.carousel-content {
-  display: inline-block;
+.carousel-box {
+  position: relative;
   height: 40rem;
-  width: 60rem;
+  margin: 5rem 15.5rem;
+  overflow: hidden;
+}
+.carousel-content-main {
+  display: inline-block;
+  position: absolute;
+  left: 52rem;
+  height: 40rem;
+  width: 55rem;
+  padding: 2rem;
   border-radius: 10px;
   background-color: #fff;
+  transition: all 0.45s;
 }
-.carousel-content:not(:last-child) {
-  margin-right: 2rem;
+.carousel-content-prev {
+  display: inline-block;
+  position: absolute;
+  top: 2.5rem;
+  height: 35rem;
+  width: 50rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  opacity: 0.8;
+  transition: all 0.45s;
+}
+.carousel-content-next {
+  display: inline-block;
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  height: 35rem;
+  width: 50rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  opacity: 0.8;
+  transition: all 0.45s;
 }
 .carousel-butLeft {
   position: absolute;
-  top: 35rem;
+  font-size: 2rem;
+  top: 31rem;
+  left: 10rem;
+  cursor: pointer;
+  z-index: 3;
 }
 .carousel-butRight {
   position: absolute;
-  top: 35rem;
-  right: 0;
+  font-size: 2rem;
+  top: 31rem;
+  right: 10rem;
+  cursor: pointer;
+  z-index: 3;
 }
 
 /* 輪播滾動按鈕CSS樣式 */
@@ -392,7 +467,7 @@ body {
 .dli-chevron-right {
   display: inline-block;
   vertical-align: middle;
-  color: #333;
+  color: #fff;
   line-height: 1;
   width: 1em;
   height: 1em;
@@ -401,12 +476,16 @@ body {
   border-bottom: 0;
   box-sizing: border-box;
   transform: translateX(-25%) rotate(45deg);
+  transition: transform 0.3s;
+}
+.dli-chevron-right:hover {
+  transform: translateX(-25%) rotate(45deg) scale(1.5);
 }
 
 .dli-chevron-left {
   display: inline-block;
   vertical-align: middle;
-  color: #333;
+  color: #fff;
   line-height: 1;
   width: 1em;
   height: 1em;
@@ -415,4 +494,8 @@ body {
   border-bottom: 0;
   box-sizing: border-box;
   transform: translateX(25%) rotate(-135deg);
+  transition: transform 0.3s;
+}
+.dli-chevron-left:hover {
+  transform: translateX(25%) rotate(-135deg) scale(1.5);
 }/*# sourceMappingURL=style.css.map */

@@ -1,15 +1,72 @@
-.carousel {
-	margin-bottom: $m-mid;
+/* 輪播滾動Vue動態樣式 */
+/* fade in(初始) */
+.fade {
+	&-enter {
+		&-from {
+			opacity: 0;
+		}
+		&-to {
+			opacity: 1;
+		}
+		&-active {
+			transition: opacity 0.3s;
+		}
+	}
+}
 
-	&-box {
-		position: relative;
-		height: 70rem;
-		margin: 0 $m-lag;
-		padding-top: $p-lag;
-		padding-bottom: $p-lag;
+/* move next */
+.move-next {
+	&-enter-from {
+		transform: translate(100%);
+		opacity: 0;
+	}
+	&-enter-to,
+	&-leave-from {
+		transform: translate(0);
+		opacity: 1;
+	}
+	&-leave-to {
+		transform: translate(-100%);
+		opacity: 0;
 	}
 
+	&-move,
+	&-enter-active,
+	&-leave-active {
+		transition: all 0.5s;
+	}
+}
+
+/* move prev */
+.move-prev {
+	&-enter-from {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+	&-enter-to,
+	&-leave-from {
+		transform: translate(0);
+		opacity: 1;
+	}
+	&-leave-to {
+		transform: translate(100%);
+		opacity: 0;
+	}
+
+	&-move,
+	&-enter-active,
+	&-leave-active {
+		transition: all 0.5s;
+	}
+}
+
+/* carousel基礎樣式 */
+.carousel {
+	padding-top: $p-mid;
+	position: relative;
+
 	&-heading {
+		margin-left: $m-lag;
 		font-size: $font-size4;
 		font-weight: 100;
 		letter-spacing: 3px;
@@ -18,38 +75,74 @@
 
 		&--num {
 			float: right;
+			margin-right: $m-lag;
 		}
 	}
 
-	&-container {
-		margin-top: $m-mid;
-		height: 100%;
-		width: 100%;
+	&-box {
+		position: relative;
+		height: 40rem;
+		margin: $m-mid $m-lag;
 		overflow: hidden;
-		white-space: nowrap;
 	}
 
 	&-content {
-		display: inline-block;
-		height: 40rem;
-		width: 60rem;
-		border-radius: 10px;
-		background-color: $color-white;
+		&-main {
+			display: inline-block;
+			position: absolute;
+			left: 52rem;
+			height: 40rem;
+			width: 55rem;
+			padding: 2rem;
+			border-radius: 10px;
+			background-color: $color-white;
+			transition: all 0.45s;
+		}
 
-		&:not(:last-child) {
-			margin-right: $m-sml;
+		&-prev {
+			display: inline-block;
+			position: absolute;
+			top: 2.5rem;
+			height: 35rem;
+			width: 50rem;
+			padding: 2rem;
+			border-radius: 10px;
+			background-color: $color-white;
+			opacity: 0.8;
+			transition: all 0.45s;
+		}
+
+		&-next {
+			display: inline-block;
+			position: absolute;
+			top: 2.5rem;
+			right: 0;
+			height: 35rem;
+			width: 50rem;
+			padding: 2rem;
+			border-radius: 10px;
+			background-color: $color-white;
+			opacity: 0.8;
+			transition: all 0.45s;
 		}
 	}
 
 	&-butLeft {
 		position: absolute;
-		top: 35rem;
+		font-size: 2rem;
+		top: 31rem;
+		left: 10rem;
+		cursor: pointer;
+		z-index: 3;
 	}
 
 	&-butRight {
 		position: absolute;
-		top: 35rem;
-		right: 0;
+		font-size: 2rem;
+		top: 31rem;
+		right: 10rem;
+		cursor: pointer;
+		z-index: 3;
 	}
 }
 
@@ -58,7 +151,7 @@
 .dli-chevron-right {
 	display: inline-block;
 	vertical-align: middle;
-	color: #333;
+	color: $color-white;
 	line-height: 1;
 	width: 1em;
 	height: 1em;
@@ -67,12 +160,17 @@
 	border-bottom: 0;
 	box-sizing: border-box;
 	transform: translateX(-25%) rotate(45deg);
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: translateX(-25%) rotate(45deg) scale(1.5);
+	}
 }
 
 .dli-chevron-left {
 	display: inline-block;
 	vertical-align: middle;
-	color: #333;
+	color: $color-white;
 	line-height: 1;
 	width: 1em;
 	height: 1em;
@@ -81,4 +179,9 @@
 	border-bottom: 0;
 	box-sizing: border-box;
 	transform: translateX(25%) rotate(-135deg);
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: translateX(25%) rotate(-135deg) scale(1.5);
+	}
 }
