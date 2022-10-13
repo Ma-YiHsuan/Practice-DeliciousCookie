@@ -62,7 +62,7 @@
 
 /* carousel基礎樣式 */
 .carousel {
-	padding-top: $p-mid;
+	padding: $p-lag 0;
 	position: relative;
 
 	&-heading {
