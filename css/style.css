@@ -9,12 +9,12 @@
 
 *::-moz-selection {
   color: #fff;
-  background-color: #c9684f;
+  background-color: #b85037;
 }
 
 *::selection {
   color: #fff;
-  background-color: #c9684f;
+  background-color: #b85037;
 }
 
 html {
@@ -85,9 +85,10 @@ body {
   list-style: none;
   font-size: 1.6rem;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 .navbar__pages-list--style {
-  margin-right: 1rem;
+  margin-right: 2rem;
   text-decoration: none;
   color: #fff;
   display: inline-block;
@@ -127,30 +128,56 @@ body {
   text-align: end;
   font-size: 1.6rem;
   font-weight: 700;
+  letter-spacing: 1px;
 }
-.navbar__client--style {
-  margin-left: 1rem;
+.navbar__client--login {
+  margin-right: 2rem;
   text-decoration: none;
   color: #fff;
   display: inline-block;
   overflow: hidden;
 }
-.navbar__client--style .slot-content {
+.navbar__client--login .slot-content {
   display: inline-block;
   position: relative;
   transition: all 0.3s;
 }
-.navbar__client--style .slot-content::after {
+.navbar__client--login .slot-content::after {
   content: attr(hidden-slot-text);
   position: absolute;
   top: 100%;
   left: 0;
 }
-.navbar__client--style:hover .slot-content {
+.navbar__client--login:hover .slot-content {
   transform: translateY(-100%);
+}
+.navbar__client--shoppingCart {
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+  color: #ec6d4e;
+  background-color: #fff;
+  height: 4.3rem;
+  width: 4.3rem;
+  border-radius: 50%;
+}
+.navbar__client--shoppingCart-amount {
+  display: inline-block;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.8rem;
+  padding: 2px;
+  color: #fff;
+  background-color: #b85037;
+  font-size: 1.3rem;
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .header {
+  position: relative;
   color: #fff;
   height: 70rem;
   margin-bottom: 5rem;
@@ -176,6 +203,20 @@ body {
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: 1rem;
+}
+.header__text-box2 {
+  position: absolute;
+  bottom: 0;
+  left: 2.5%;
+}
+.header__text-box2 .vegan {
+  display: inline-block;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .heading-primery {

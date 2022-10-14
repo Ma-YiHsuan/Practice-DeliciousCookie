@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
     <link rel="stylesheet" href="css/style.css">
     <title>好吃的餅乾</title>
 </head>
@@ -16,29 +17,9 @@
         <nav class="navbar">
             <div class="navbar__pages">
                 <ul class="navbar__pages-list">
-                    <a href="#" class="navbar__pages-list--style">
+                    <a href="#" class="navbar__pages-list--style" v-for="item of capitalizaList" v-cloak>
                         <li>
-                            <span class="slot-content" hidden-slot-text="Home" id="home">Home</span>
-                        </li>
-                    </a>
-                    <a href="#" class="navbar__pages-list--style">
-                        <li>
-                            <span class="slot-content" hidden-slot-text="Story">Story</span>
-                        </li>
-                    </a>
-                    <a href="#" class="navbar__pages-list--style">
-                        <li>
-                            <span class="slot-content" hidden-slot-text="Products">Products</span>
-                        </li>
-                    </a>
-                    <a href="#" class="navbar__pages-list--style">
-                        <li>
-                            <span class="slot-content" hidden-slot-text="News">News</span>
-                        </li>
-                    </a>
-                    <a href="#" class="navbar__pages-list--style">
-                        <li>
-                            <span class="slot-content" hidden-slot-text="Stores">Stores</span>
+                            <span class="slot-content" :hidden-slot-text="item">{{ item }}</span>
                         </li>
                     </a>
                 </ul>
@@ -47,10 +28,13 @@
                 <a href="#" class="navbar__logo--style">好吃的餅乾</a>
             </div>
             <div class="navbar__client">
-                <a href="#" class="navbar__client--style">
+                <a href="#" class="navbar__client--login">
                     <span class="slot-content" hidden-slot-text="Login">Login</span>
                 </a>
-                <a href="#" class="navbar__client--style">購物車</a>
+                <a href="#" class="navbar__client--shoppingCart">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span class="navbar__client--shoppingCart-amount">0</span>
+                </a>
             </div>
         </nav>
         <header class="header">
@@ -63,6 +47,9 @@
             <div class="header__text-box">
                 <p class="slogan">超神級好吃，</p>
                 <p class="slogan">大家都該吃。</p>
+            </div>
+            <div class="header__text-box2">
+                <p class="vegan">Vegan Friendly</p>
             </div>
             <div class="pic__runanim-box">
                 <div class="scroll scr-main pic-style">
