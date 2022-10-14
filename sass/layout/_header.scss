@@ -1,84 +1,100 @@
 .header {
-    color: $color-white;
-    height: 70rem;
-    margin-bottom: $m-mid;
+	position: relative;
+	color: $color-white;
+	height: 70rem;
+	margin-bottom: $m-mid;
 
-    &__logo-box {
-        z-index: 3;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+	&__logo-box {
+		z-index: 3;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 
-    &__text-box {
-        position: absolute;
-        top: 50%;
-        left: 15%;
-        transform: translate(-50%, -50%);
+	&__text-box {
+		position: absolute;
+		top: 50%;
+		left: 15%;
+		transform: translate(-50%, -50%);
 
-        .slogan {
-            display: inline-block;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-size: $font-size4;
-            font-weight: 400;
-            letter-spacing: 1rem;
-        }
-    }
+		.slogan {
+			display: inline-block;
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+			font-size: $font-size4;
+			font-weight: 400;
+			letter-spacing: 1rem;
+		}
+	}
+
+	&__text-box2 {
+		position: absolute;
+		bottom: 0;
+		left: 2.5%;
+
+		.vegan {
+			display: inline-block;
+			writing-mode: vertical-rl;
+			text-orientation: mixed;
+			font-size: 1.3rem;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+	}
 }
 
 .heading-primery {
-    display: inline-block;
-    text-align: center;
+	display: inline-block;
+	text-align: center;
 
-    &--main {
-        display: block;
-        font-size: $font-size1;
-        font-weight: 700;
-        letter-spacing: .5rem;
-    }
+	&--main {
+		display: block;
+		font-size: $font-size1;
+		font-weight: 700;
+		letter-spacing: 0.5rem;
+	}
 
-    &--sub {
-        display: block;
-        font-size: $font-size5;
-        font-weight: 400;
-        letter-spacing: 1.5rem;
-    }
+	&--sub {
+		display: block;
+		font-size: $font-size5;
+		font-weight: 400;
+		letter-spacing: 1.5rem;
+	}
 }
 
 .pic-style {
-    height: 70rem;
-    &1 {
-        background-image: url("https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
-        @include animaPic;
-    }
+	height: 70rem;
+	&1 {
+		background-image: url('https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+		@include animaPic;
+	}
 
-    &2 {
-        background-image: url("https://images.unsplash.com/photo-1607919965349-c3c790913de7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
-        @include animaPic;
-    }
+	&2 {
+		background-image: url('https://images.unsplash.com/photo-1607919965349-c3c790913de7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+		@include animaPic;
+	}
 
-    &3 {
-        background-image: url("https://images.unsplash.com/photo-1607919565317-3ab3dd5abafd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
-        @include animaPic;
-    }
+	&3 {
+		background-image: url('https://images.unsplash.com/photo-1607919565317-3ab3dd5abafd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+		@include animaPic;
+	}
 
-    &4 {
-        background-image: url("https://images.unsplash.com/photo-1607920592831-f68bbee49939?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
-        @include animaPic;
-    }
+	&4 {
+		background-image: url('https://images.unsplash.com/photo-1607920592831-f68bbee49939?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+		@include animaPic;
+	}
 
-    &5 {
-        background-image: url("https://images.unsplash.com/photo-1607919966225-12386ac398b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
-        @include animaPic;
-    }
+	&5 {
+		background-image: url('https://images.unsplash.com/photo-1607919966225-12386ac398b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+		@include animaPic;
+	}
 }
 
 .pic__runanim-box {
-    width: 70vw;
-    overflow: hidden;
-    white-space: nowrap;
-    float: right;
-    @include scroll-All(100s);
+	width: 70vw;
+	overflow: hidden;
+	white-space: nowrap;
+	float: right;
+	@include scroll-All(100s);
 }
