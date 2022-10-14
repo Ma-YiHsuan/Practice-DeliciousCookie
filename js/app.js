@@ -8,7 +8,16 @@ const app = createApp({
 			scrollPos: 0,
 			startPoint: 895,
 			footerList: ['常見Q&A', '關於我們', '意見回報', '合作提案', '服務條款'],
+			headerList: ['home', 'story', 'products', 'news', 'stores'],
 		};
+	},
+	computed: {
+		capitalizaList() {
+			const newList = this.headerList.map((value) => {
+				return value.slice(0, 1).toUpperCase() + value.slice(1);
+			});
+			return newList;
+		},
 	},
 	mounted() {
 		window.addEventListener('scroll', this.scrollHandler);
