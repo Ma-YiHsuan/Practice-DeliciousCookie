@@ -4,6 +4,10 @@
 	height: 60rem;
 	margin-bottom: $m-mid;
 
+	@include respon(big) {
+		height: 50rem;
+	}
+
 	&__logo-box {
 		z-index: 3;
 		position: absolute;
@@ -18,6 +22,16 @@
 		left: 15%;
 		transform: translate(-50%, -50%);
 
+		@include respon(middle) {
+			top: 10%;
+			left: 10%;
+			transform: translateX(-50%);
+		}
+		@include respon(phone) {
+			top: 5%;
+			left: 5%;
+		}
+
 		.slogan {
 			display: inline-block;
 			writing-mode: vertical-rl;
@@ -25,6 +39,12 @@
 			font-size: $font-size4;
 			font-weight: 400;
 			letter-spacing: 1rem;
+
+			@include respon(middle) {
+				display: block;
+				font-size: $font-size5;
+				letter-spacing: 3px;
+			}
 		}
 	}
 
@@ -32,6 +52,14 @@
 		position: absolute;
 		bottom: 0;
 		left: 2.5%;
+
+		@include respon(middle) {
+			left: 10%;
+			transform: translateX(-50%);
+		}
+		@include respon(phone) {
+			left: 5%;
+		}
 
 		.vegan {
 			display: inline-block;
@@ -53,6 +81,13 @@
 		font-size: $font-size1;
 		font-weight: 700;
 		letter-spacing: 0.5rem;
+
+		@include respon(middle) {
+			font-size: $font-size-md;
+		}
+		@include respon(exsm-phone) {
+			font-size: $font-size3;
+		}
 	}
 
 	&--sub {
@@ -60,11 +95,24 @@
 		font-size: $font-size5;
 		font-weight: 400;
 		letter-spacing: 1.5rem;
+
+		@include respon(middle) {
+			font-size: $font-default-size;
+			letter-spacing: 1rem;
+		}
+		@include respon(exsm-phone) {
+			letter-spacing: 2px;
+		}
 	}
 }
 
 .pic-style {
 	height: 60rem;
+
+	@include respon(big) {
+		height: 50rem;
+	}
+
 	&1 {
 		background-image: url('https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
 		@include animaPic;
@@ -97,4 +145,11 @@
 	white-space: nowrap;
 	float: right;
 	@include scroll-All(100s);
+
+	@include respon(middle) {
+		width: 80vw;
+	}
+	@include respon(phone) {
+		width: 90vw;
+	}
 }

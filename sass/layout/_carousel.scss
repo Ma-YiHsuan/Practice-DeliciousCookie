@@ -83,6 +83,13 @@
 		height: 30rem;
 		margin: $m-mid $m-lag;
 		overflow: hidden;
+
+		@include respon(middle) {
+			margin: $m-mid $m-mid;
+		}
+		@include respon(phone) {
+			white-space: nowrap;
+		}
 	}
 
 	&-content {
@@ -96,6 +103,13 @@
 			border-radius: 10px;
 			background-color: $color-white;
 			transition: all 0.45s;
+
+			@include respon(phone) {
+				position: relative;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
 		}
 
 		&-prev {
@@ -110,6 +124,14 @@
 			opacity: 0.8;
 			transition: all 0.45s;
 			z-index: -1;
+
+			@include respon(phone) {
+				position: relative;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 0;
+			}
 		}
 
 		&-next {
@@ -125,25 +147,43 @@
 			opacity: 0.8;
 			transition: all 0.45s;
 			z-index: -1;
+
+			@include respon(phone) {
+				position: relative;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 0;
+			}
 		}
 	}
 
 	&-butLeft {
 		position: absolute;
-		font-size: 2rem;
+		font-size: $font-size5;
 		top: 30rem;
 		left: 10rem;
 		cursor: pointer;
 		z-index: 3;
+
+		@include respon(middle) {
+			font-size: $font-default-size;
+			left: 2rem;
+		}
 	}
 
 	&-butRight {
 		position: absolute;
-		font-size: 2rem;
+		font-size: $font-size5;
 		top: 30rem;
 		right: 10rem;
 		cursor: pointer;
 		z-index: 3;
+
+		@include respon(middle) {
+			font-size: $font-default-size;
+			right: 2rem;
+		}
 	}
 }
 

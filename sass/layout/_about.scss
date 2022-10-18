@@ -29,10 +29,24 @@
 		color: $color-primary;
 		border-radius: 5px;
 
+		@include respon(big) {
+			left: 10%;
+		}
+		@include respon(middle) {
+			top: 70%;
+			left: 50%;
+			width: 70%;
+			transform: translateX(-50%);
+		}
+
 		h3 {
 			font-size: $font-size3;
 			margin: $m-mid 0;
 			letter-spacing: 1rem;
+
+			@include respon(middle) {
+				margin: $m-sml 0;
+			}
 		}
 
 		p {
@@ -42,6 +56,10 @@
 
 			&:not(:last-child) {
 				margin-bottom: $m-mid;
+
+				@include respon(middle) {
+					margin-bottom: $m-sml;
+				}
 			}
 		}
 	}

@@ -8,9 +8,20 @@
 	background-color: $color-primary;
 
 	&__pages {
-		width: 27.5%;
+		width: 30%;
 		padding-left: $p-mid;
 		align-self: center;
+
+		@include respon(big) {
+			width: 35%;
+		}
+		@include respon(middle) {
+			width: 30%;
+			padding-left: $p-sml;
+		}
+		@include respon(exsm-phone) {
+			width: 20%;
+		}
 
 		&-list {
 			list-style: none;
@@ -19,29 +30,50 @@
 			letter-spacing: 1px;
 
 			&--style {
-				margin-right: 1.5rem;
+				margin-right: 1rem;
 				@include navLink;
 				@include slotEffect;
+			}
+
+			@include respon(middle) {
+				display: none;
 			}
 		}
 	}
 
 	&__logo {
-		width: 45%;
+		width: 40%;
 		padding: $p-sml;
 		text-align: center;
 		align-self: center;
+
+		@include respon(big) {
+			width: 30%;
+		}
+		@include respon(middle) {
+			width: 40%;
+		}
+		@include respon(exsm-phone) {
+			width: 60%;
+		}
 
 		&--style {
 			@include navLink;
 			font-size: $font-size2;
 			font-weight: 700;
 			letter-spacing: 0.5rem;
+
+			@include respon(middle) {
+				font-size: $font-size3;
+			}
+			@include respon(exsm-phone) {
+				font-size: $font-size4;
+			}
 		}
 	}
 
 	&__client {
-		width: 27.5%;
+		width: 30%;
 		padding-right: $p-mid;
 		align-self: center;
 		text-align: end;
@@ -49,10 +81,26 @@
 		font-weight: 700;
 		letter-spacing: 1px;
 
+		@include respon(big) {
+			width: 35%;
+		}
+		@include respon(middle) {
+			width: 30%;
+			font-size: $font-size5;
+			padding-right: $p-sml;
+		}
+		@include respon(exsm-phone) {
+			width: 20%;
+		}
+
 		&--login {
 			margin-right: $m-sml;
 			@include navLink;
 			@include slotEffect;
+
+			@include respon(phone) {
+				display: none;
+			}
 		}
 
 		&--shoppingCart {
@@ -69,6 +117,10 @@
 				height: 4rem;
 				width: 4rem;
 			}
+			@include respon(phone) {
+				height: 4.5rem;
+				width: 4.5rem;
+			}
 
 			&-amount {
 				display: inline-block;
@@ -84,6 +136,37 @@
 				border-radius: 50%;
 				text-align: center;
 			}
+		}
+	}
+}
+
+/* https://design-library.jp/lab/icons-menu */
+.dli-menu {
+	display: none;
+	vertical-align: middle;
+	color: $color-white;
+	line-height: 1;
+	width: 1em;
+
+	> span {
+		display: none;
+		height: 0.1em;
+		background: currentColor;
+		border-radius: 0.1em;
+	}
+	> span + span {
+		display: none;
+		margin-top: 0.22em;
+	}
+
+	@include respon(middle) {
+		display: inline-block;
+		font-size: $font-size4;
+		> span {
+			display: block;
+		}
+		> span + span {
+			display: block;
 		}
 	}
 }

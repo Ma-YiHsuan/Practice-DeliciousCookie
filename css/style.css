@@ -92,9 +92,25 @@ body {
   background-color: #ec6d4e;
 }
 .navbar__pages {
-  width: 27.5%;
+  width: 30%;
   padding-left: 4rem;
   align-self: center;
+}
+@media screen and (max-width: 1280px) {
+  .navbar__pages {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navbar__pages {
+    width: 30%;
+    padding-left: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar__pages {
+    width: 20%;
+  }
 }
 .navbar__pages-list {
   list-style: none;
@@ -103,7 +119,7 @@ body {
   letter-spacing: 1px;
 }
 .navbar__pages-list--style {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   text-decoration: none;
   color: #fff;
   display: inline-block;
@@ -123,11 +139,31 @@ body {
 .navbar__pages-list--style:hover .slot-content {
   transform: translateY(-100%);
 }
+@media screen and (max-width: 1024px) {
+  .navbar__pages-list {
+    display: none;
+  }
+}
 .navbar__logo {
-  width: 45%;
+  width: 40%;
   padding: 2rem;
   text-align: center;
   align-self: center;
+}
+@media screen and (max-width: 1280px) {
+  .navbar__logo {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navbar__logo {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar__logo {
+    width: 60%;
+  }
 }
 .navbar__logo--style {
   text-decoration: none;
@@ -136,14 +172,41 @@ body {
   font-weight: 700;
   letter-spacing: 0.5rem;
 }
+@media screen and (max-width: 1024px) {
+  .navbar__logo--style {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar__logo--style {
+    font-size: 3rem;
+  }
+}
 .navbar__client {
-  width: 27.5%;
+  width: 30%;
   padding-right: 4rem;
   align-self: center;
   text-align: end;
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 1280px) {
+  .navbar__client {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navbar__client {
+    width: 30%;
+    font-size: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar__client {
+    width: 20%;
+  }
 }
 .navbar__client--login {
   margin-right: 2rem;
@@ -166,6 +229,11 @@ body {
 .navbar__client--login:hover .slot-content {
   transform: translateY(-100%);
 }
+@media screen and (max-width: 768px) {
+  .navbar__client--login {
+    display: none;
+  }
+}
 .navbar__client--shoppingCart {
   display: inline-block;
   position: relative;
@@ -180,6 +248,12 @@ body {
   .navbar__client--shoppingCart {
     height: 4rem;
     width: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar__client--shoppingCart {
+    height: 4.5rem;
+    width: 4.5rem;
   }
 }
 .navbar__client--shoppingCart-amount {
@@ -197,11 +271,47 @@ body {
   text-align: center;
 }
 
+/* https://design-library.jp/lab/icons-menu */
+.dli-menu {
+  display: none;
+  vertical-align: middle;
+  color: #fff;
+  line-height: 1;
+  width: 1em;
+}
+.dli-menu > span {
+  display: none;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+}
+.dli-menu > span + span {
+  display: none;
+  margin-top: 0.22em;
+}
+@media screen and (max-width: 1024px) {
+  .dli-menu {
+    display: inline-block;
+    font-size: 3rem;
+  }
+  .dli-menu > span {
+    display: block;
+  }
+  .dli-menu > span + span {
+    display: block;
+  }
+}
+
 .header {
   position: relative;
   color: #fff;
   height: 60rem;
   margin-bottom: 5rem;
+}
+@media screen and (max-width: 1280px) {
+  .header {
+    height: 50rem;
+  }
 }
 .header__logo-box {
   z-index: 3;
@@ -216,6 +326,19 @@ body {
   left: 15%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 1024px) {
+  .header__text-box {
+    top: 10%;
+    left: 10%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__text-box {
+    top: 5%;
+    left: 5%;
+  }
+}
 .header__text-box .slogan {
   display: inline-block;
   -ms-writing-mode: tb-rl;
@@ -225,10 +348,28 @@ body {
   font-weight: 400;
   letter-spacing: 1rem;
 }
+@media screen and (max-width: 1024px) {
+  .header__text-box .slogan {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+}
 .header__text-box2 {
   position: absolute;
   bottom: 0;
   left: 2.5%;
+}
+@media screen and (max-width: 1024px) {
+  .header__text-box2 {
+    left: 10%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__text-box2 {
+    left: 5%;
+  }
 }
 .header__text-box2 .vegan {
   display: inline-block;
@@ -250,15 +391,41 @@ body {
   font-weight: 700;
   letter-spacing: 0.5rem;
 }
+@media screen and (max-width: 1024px) {
+  .heading-primery--main {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .heading-primery--main {
+    font-size: 3.5rem;
+  }
+}
 .heading-primery--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1.5rem;
 }
+@media screen and (max-width: 1024px) {
+  .heading-primery--sub {
+    font-size: 1.6rem;
+    letter-spacing: 1rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .heading-primery--sub {
+    letter-spacing: 2px;
+  }
+}
 
 .pic-style {
   height: 60rem;
+}
+@media screen and (max-width: 1280px) {
+  .pic-style {
+    height: 50rem;
+  }
 }
 .pic-style1 {
   background-image: url("https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
@@ -327,6 +494,16 @@ body {
   -webkit-animation-delay: -50s;
           animation-delay: -50s;
 }
+@media screen and (max-width: 1024px) {
+  .pic__runanim-box {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pic__runanim-box {
+    width: 90vw;
+  }
+}
 
 .aboutMe {
   position: relative;
@@ -357,10 +534,28 @@ body {
   color: #ec6d4e;
   border-radius: 5px;
 }
+@media screen and (max-width: 1280px) {
+  .aboutMe__text {
+    left: 10%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .aboutMe__text {
+    top: 70%;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+  }
+}
 .aboutMe__text h3 {
   font-size: 3.5rem;
   margin: 5rem 0;
   letter-spacing: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .aboutMe__text h3 {
+    margin: 2rem 0;
+  }
 }
 .aboutMe__text p {
   font-size: 1.6rem;
@@ -369,6 +564,11 @@ body {
 }
 .aboutMe__text p:not(:last-child) {
   margin-bottom: 5rem;
+}
+@media screen and (max-width: 1024px) {
+  .aboutMe__text p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }
 
 .picWithText {
@@ -480,6 +680,16 @@ body {
   margin: 5rem 15rem;
   overflow: hidden;
 }
+@media screen and (max-width: 1024px) {
+  .carousel-box {
+    margin: 5rem 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-box {
+    white-space: nowrap;
+  }
+}
 .carousel-content-main {
   display: inline-block;
   position: absolute;
@@ -490,6 +700,14 @@ body {
   border-radius: 10px;
   background-color: #fff;
   transition: all 0.45s;
+}
+@media screen and (max-width: 768px) {
+  .carousel-content-main {
+    position: relative;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 .carousel-content-prev {
   display: inline-block;
@@ -503,6 +721,15 @@ body {
   opacity: 0.8;
   transition: all 0.45s;
   z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .carousel-content-prev {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
 }
 .carousel-content-next {
   display: inline-block;
@@ -518,6 +745,15 @@ body {
   transition: all 0.45s;
   z-index: -1;
 }
+@media screen and (max-width: 768px) {
+  .carousel-content-next {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+}
 .carousel-butLeft {
   position: absolute;
   font-size: 2rem;
@@ -526,6 +762,12 @@ body {
   cursor: pointer;
   z-index: 3;
 }
+@media screen and (max-width: 1024px) {
+  .carousel-butLeft {
+    font-size: 1.6rem;
+    left: 2rem;
+  }
+}
 .carousel-butRight {
   position: absolute;
   font-size: 2rem;
@@ -533,6 +775,12 @@ body {
   right: 10rem;
   cursor: pointer;
   z-index: 3;
+}
+@media screen and (max-width: 1024px) {
+  .carousel-butRight {
+    font-size: 1.6rem;
+    right: 2rem;
+  }
 }
 
 /* 輪播滾動按鈕CSS樣式 */
