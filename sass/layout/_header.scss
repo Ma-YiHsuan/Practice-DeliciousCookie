@@ -1,7 +1,7 @@
 .header {
 	position: relative;
 	color: $color-white;
-	height: 70rem;
+	height: 60rem;
 	margin-bottom: $m-mid;
 
 	&__logo-box {
@@ -64,7 +64,7 @@
 }
 
 .pic-style {
-	height: 70rem;
+	height: 60rem;
 	&1 {
 		background-image: url('https://images.unsplash.com/photo-1607919564479-c2e00f3b14a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
 		@include animaPic;
