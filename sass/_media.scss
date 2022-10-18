@@ -1,0 +1,34 @@
+// 640px   exsm-phone
+// 768px   phone
+// 1024px  middle
+// 1280px  big
+// 1536px  設計初始(我筆電)
+// 1544px +  large
+
+@mixin respon($breakpoint) {
+	@if $breakpoint == exsm-phone {
+		@media screen and (max-width: 640px) {
+			@content;
+		}
+	}
+	@if $breakpoint == phone {
+		@media screen and (max-width: 768px) {
+			@content;
+		}
+	}
+	@if $breakpoint == middle {
+		@media screen and (max-width: 1024px) {
+			@content;
+		}
+	}
+	@if $breakpoint == big {
+		@media screen and (max-width: 1280px) {
+			@content;
+		}
+	}
+	@if $breakpoint == large {
+		@media screen and (min-width: 1544px) {
+			@content;
+		}
+	}
+}
