@@ -627,15 +627,12 @@ body {
 /* move next */
 .move-next-enter-from {
   transform: translate(100%);
-  opacity: 0;
 }
 .move-next-enter-to, .move-next-leave-from {
   transform: translate(0);
-  opacity: 1;
 }
 .move-next-leave-to {
   transform: translate(-100%);
-  opacity: 0;
 }
 .move-next-move, .move-next-enter-active, .move-next-leave-active {
   transition: all 0.5s;
@@ -644,15 +641,12 @@ body {
 /* move prev */
 .move-prev-enter-from {
   transform: translate(-100%);
-  opacity: 0;
 }
 .move-prev-enter-to, .move-prev-leave-from {
   transform: translate(0);
-  opacity: 1;
 }
 .move-prev-leave-to {
   transform: translate(100%);
-  opacity: 0;
 }
 .move-prev-move, .move-prev-enter-active, .move-prev-leave-active {
   transition: all 0.5s;
@@ -674,21 +668,32 @@ body {
 .carousel-heading--num {
   float: right;
 }
+@media screen and (max-width: 768px) {
+  .carousel-heading {
+    margin: 0 5rem;
+  }
+}
 .carousel-box {
   position: relative;
   height: 30rem;
   margin: 5rem 15rem;
   overflow: hidden;
+  white-space: nowrap;
 }
 @media screen and (max-width: 1024px) {
   .carousel-box {
     margin: 5rem 5rem;
   }
 }
-@media screen and (max-width: 768px) {
-  .carousel-box {
-    white-space: nowrap;
-  }
+.carousel-content {
+  /* 只有作用在768px以下 */
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  /* 作用在768px以上 */
 }
 .carousel-content-main {
   display: inline-block;
@@ -700,14 +705,6 @@ body {
   border-radius: 10px;
   background-color: #fff;
   transition: all 0.45s;
-}
-@media screen and (max-width: 768px) {
-  .carousel-content-main {
-    position: relative;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
 }
 .carousel-content-prev {
   display: inline-block;
@@ -722,15 +719,6 @@ body {
   transition: all 0.45s;
   z-index: -1;
 }
-@media screen and (max-width: 768px) {
-  .carousel-content-prev {
-    position: relative;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-  }
-}
 .carousel-content-next {
   display: inline-block;
   position: absolute;
@@ -744,15 +732,6 @@ body {
   opacity: 0.8;
   transition: all 0.45s;
   z-index: -1;
-}
-@media screen and (max-width: 768px) {
-  .carousel-content-next {
-    position: relative;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-  }
 }
 .carousel-butLeft {
   position: absolute;

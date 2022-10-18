@@ -18,16 +18,13 @@
 .move-next {
 	&-enter-from {
 		transform: translate(100%);
-		opacity: 0;
 	}
 	&-enter-to,
 	&-leave-from {
 		transform: translate(0);
-		opacity: 1;
 	}
 	&-leave-to {
 		transform: translate(-100%);
-		opacity: 0;
 	}
 
 	&-move,
@@ -41,16 +38,13 @@
 .move-prev {
 	&-enter-from {
 		transform: translate(-100%);
-		opacity: 0;
 	}
 	&-enter-to,
 	&-leave-from {
 		transform: translate(0);
-		opacity: 1;
 	}
 	&-leave-to {
 		transform: translate(100%);
-		opacity: 0;
 	}
 
 	&-move,
@@ -76,6 +70,10 @@
 		&--num {
 			float: right;
 		}
+
+		@include respon(phone) {
+			margin: 0 $m-mid;
+		}
 	}
 
 	&-box {
@@ -83,16 +81,23 @@
 		height: 30rem;
 		margin: $m-mid $m-lag;
 		overflow: hidden;
+		white-space: nowrap;
 
 		@include respon(middle) {
 			margin: $m-mid $m-mid;
 		}
-		@include respon(phone) {
-			white-space: nowrap;
-		}
 	}
 
 	&-content {
+		/* 只有作用在768px以下 */
+		display: inline-block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		padding: 2rem;
+		background-color: $color-white;
+
+		/* 作用在768px以上 */
 		&-main {
 			display: inline-block;
 			position: absolute;
@@ -103,13 +108,6 @@
 			border-radius: 10px;
 			background-color: $color-white;
 			transition: all 0.45s;
-
-			@include respon(phone) {
-				position: relative;
-				left: 0;
-				height: 100%;
-				width: 100%;
-			}
 		}
 
 		&-prev {
@@ -124,14 +122,6 @@
 			opacity: 0.8;
 			transition: all 0.45s;
 			z-index: -1;
-
-			@include respon(phone) {
-				position: relative;
-				top: 0;
-				height: 100%;
-				width: 100%;
-				z-index: 0;
-			}
 		}
 
 		&-next {
@@ -147,14 +137,6 @@
 			opacity: 0.8;
 			transition: all 0.45s;
 			z-index: -1;
-
-			@include respon(phone) {
-				position: relative;
-				top: 0;
-				height: 100%;
-				width: 100%;
-				z-index: 0;
-			}
 		}
 	}
 
