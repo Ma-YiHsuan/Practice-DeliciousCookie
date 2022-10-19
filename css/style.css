@@ -328,15 +328,9 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .header__text-box {
-    top: 10%;
+    top: 5%;
     left: 10%;
     transform: translateX(-50%);
-  }
-}
-@media screen and (max-width: 768px) {
-  .header__text-box {
-    top: 5%;
-    left: 5%;
   }
 }
 .header__text-box .slogan {
@@ -364,11 +358,6 @@ body {
   .header__text-box2 {
     left: 10%;
     transform: translateX(-50%);
-  }
-}
-@media screen and (max-width: 768px) {
-  .header__text-box2 {
-    left: 5%;
   }
 }
 .header__text-box2 .vegan {
@@ -497,11 +486,6 @@ body {
 @media screen and (max-width: 1024px) {
   .pic__runanim-box {
     width: 80vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .pic__runanim-box {
-    width: 90vw;
   }
 }
 

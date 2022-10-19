@@ -23,13 +23,9 @@
 		transform: translate(-50%, -50%);
 
 		@include respon(middle) {
-			top: 10%;
+			top: 5%;
 			left: 10%;
 			transform: translateX(-50%);
-		}
-		@include respon(phone) {
-			top: 5%;
-			left: 5%;
 		}
 
 		.slogan {
@@ -56,9 +52,6 @@
 		@include respon(middle) {
 			left: 10%;
 			transform: translateX(-50%);
-		}
-		@include respon(phone) {
-			left: 5%;
 		}
 
 		.vegan {
@@ -148,8 +141,5 @@
 
 	@include respon(middle) {
 		width: 80vw;
-	}
-	@include respon(phone) {
-		width: 90vw;
 	}
 }
