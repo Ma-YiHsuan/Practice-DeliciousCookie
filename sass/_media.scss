@@ -1,33 +1,33 @@
-// 640px   exsm-phone
-// 768px   phone
-// 1024px  middle
-// 1280px  big
+// 640px   exsm-phone  40em
+// 768px   phone       48em
+// 1024px  middle      64em
+// 1280px  big         80em
 // 1536px  設計初始(我筆電)
-// 1544px +  large
+// 1544px +  large     96.5em
 
 @mixin respon($breakpoint) {
 	@if $breakpoint == exsm-phone {
-		@media screen and (max-width: 640px) {
+		@media screen and (max-width: 40em) {
 			@content;
 		}
 	}
 	@if $breakpoint == phone {
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 48em) {
 			@content;
 		}
 	}
 	@if $breakpoint == middle {
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 64em) {
 			@content;
 		}
 	}
 	@if $breakpoint == big {
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 80em) {
 			@content;
 		}
 	}
 	@if $breakpoint == large {
-		@media screen and (min-width: 1544px) {
+		@media screen and (min-width: 96.5em) {
 			@content;
 		}
 	}
