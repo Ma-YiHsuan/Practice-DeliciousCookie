@@ -371,12 +371,14 @@ body {
 }
 .header__text-box {
   position: absolute;
+  width: 10rem;
   top: 50%;
   left: 15%;
   transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 64em) {
   .header__text-box {
+    width: 3rem;
     top: 5%;
     left: 10%;
     transform: translateX(-50%);
