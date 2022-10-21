@@ -22,17 +22,17 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-@media screen and (min-width: 1544px) {
+@media screen and (min-width: 96.5em) {
   html {
     font-size: 75%;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 80em) {
   html {
     font-size: 56.25%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
   html {
     font-size: 50%;
   }
@@ -92,22 +92,23 @@ body {
   background-color: #ec6d4e;
 }
 .navbar__pages {
+  position: relative;
   width: 30%;
   padding-left: 4rem;
   align-self: center;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 80em) {
   .navbar__pages {
     width: 35%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .navbar__pages {
     width: 30%;
     padding-left: 2rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40em) {
   .navbar__pages {
     width: 20%;
   }
@@ -139,28 +140,23 @@ body {
 .navbar__pages-list--style:hover .slot-content {
   transform: translateY(-100%);
 }
-@media screen and (max-width: 1024px) {
-  .navbar__pages-list {
-    display: none;
-  }
-}
 .navbar__logo {
   width: 40%;
   padding: 2rem;
   text-align: center;
   align-self: center;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 80em) {
   .navbar__logo {
     width: 30%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .navbar__logo {
     width: 40%;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40em) {
   .navbar__logo {
     width: 60%;
   }
@@ -172,12 +168,12 @@ body {
   font-weight: 700;
   letter-spacing: 0.5rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .navbar__logo--style {
     font-size: 3.5rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40em) {
   .navbar__logo--style {
     font-size: 3rem;
   }
@@ -191,19 +187,19 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 80em) {
   .navbar__client {
     width: 35%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .navbar__client {
     width: 30%;
     font-size: 2rem;
     padding-right: 2rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40em) {
   .navbar__client {
     width: 20%;
   }
@@ -229,7 +225,7 @@ body {
 .navbar__client--login:hover .slot-content {
   transform: translateY(-100%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
   .navbar__client--login {
     display: none;
   }
@@ -244,13 +240,13 @@ body {
   width: 4.3rem;
   border-radius: 50%;
 }
-@media screen and (min-width: 1544px) {
+@media screen and (min-width: 96.5em) {
   .navbar__client--shoppingCart {
     height: 4rem;
     width: 4rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
   .navbar__client--shoppingCart {
     height: 4.5rem;
     width: 4.5rem;
@@ -271,35 +267,88 @@ body {
   text-align: center;
 }
 
+/* <hamburger> component */
 /* https://design-library.jp/lab/icons-menu */
-.dli-menu {
-  display: none;
+.hamburger {
+  font-size: 3rem;
+}
+.hamburger .dli-menu {
+  display: inline-block;
   vertical-align: middle;
   color: #fff;
   line-height: 1;
   width: 1em;
 }
-.dli-menu > span {
-  display: none;
+.hamburger .dli-menu > span {
+  display: block;
   height: 0.1em;
   background: currentColor;
   border-radius: 0.1em;
 }
-.dli-menu > span + span {
-  display: none;
+.hamburger .dli-menu > span + span {
+  display: block;
   margin-top: 0.22em;
 }
-@media screen and (max-width: 1024px) {
-  .dli-menu {
-    display: inline-block;
-    font-size: 3rem;
-  }
-  .dli-menu > span {
-    display: block;
-  }
-  .dli-menu > span + span {
-    display: block;
-  }
+.hamburger .dli-close {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  line-height: 1;
+  width: 1em;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+  position: relative;
+  transform: rotate(45deg);
+}
+.hamburger .dli-close::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+
+.menu-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100vh;
+  width: 40vw;
+  background-color: #ec6d4e;
+  padding: 5rem;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.menu-list-item {
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  overflow: hidden;
+}
+.menu-list-item .slot-content {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s;
+}
+.menu-list-item .slot-content::after {
+  content: attr(hidden-slot-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.menu-list-item:hover .slot-content {
+  transform: translateY(-100%);
+}
+.menu-list-item:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .header {
@@ -308,7 +357,7 @@ body {
   height: 60rem;
   margin-bottom: 5rem;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 80em) {
   .header {
     height: 50rem;
   }
@@ -326,7 +375,7 @@ body {
   left: 15%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .header__text-box {
     top: 5%;
     left: 10%;
@@ -342,7 +391,7 @@ body {
   font-weight: 400;
   letter-spacing: 1rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .header__text-box .slogan {
     display: block;
     font-size: 2rem;
@@ -354,7 +403,7 @@ body {
   bottom: 0;
   left: 2.5%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .header__text-box2 {
     left: 10%;
     transform: translateX(-50%);
@@ -380,12 +429,12 @@ body {
   font-weight: 700;
   letter-spacing: 0.5rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .heading-primery--main {
     font-size: 6rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40em) {
   .heading-primery--main {
     font-size: 3.5rem;
   }
@@ -396,13 +445,13 @@ body {
   font-weight: 400;
   letter-spacing: 1.5rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .heading-primery--sub {
     font-size: 1.6rem;
     letter-spacing: 1rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40em) {
   .heading-primery--sub {
     letter-spacing: 2px;
   }
@@ -411,7 +460,7 @@ body {
 .pic-style {
   height: 60rem;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 80em) {
   .pic-style {
     height: 50rem;
   }
@@ -483,7 +532,7 @@ body {
   -webkit-animation-delay: -50s;
           animation-delay: -50s;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .pic__runanim-box {
     width: 80vw;
   }
@@ -518,12 +567,12 @@ body {
   color: #ec6d4e;
   border-radius: 5px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 80em) {
   .aboutMe__text {
     left: 10%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .aboutMe__text {
     top: 70%;
     left: 50%;
@@ -536,7 +585,7 @@ body {
   margin: 5rem 0;
   letter-spacing: 1rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .aboutMe__text h3 {
     margin: 2rem 0;
   }
@@ -549,7 +598,7 @@ body {
 .aboutMe__text p:not(:last-child) {
   margin-bottom: 5rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .aboutMe__text p:not(:last-child) {
     margin-bottom: 2rem;
   }
@@ -652,7 +701,7 @@ body {
 .carousel-heading--num {
   float: right;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
   .carousel-heading {
     margin: 0 5rem;
   }
@@ -664,7 +713,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .carousel-box {
     margin: 5rem 5rem;
   }
@@ -725,7 +774,7 @@ body {
   cursor: pointer;
   z-index: 3;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .carousel-butLeft {
     font-size: 1.6rem;
     left: 2rem;
@@ -739,7 +788,7 @@ body {
   cursor: pointer;
   z-index: 3;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64em) {
   .carousel-butRight {
     font-size: 1.6rem;
     right: 2rem;
