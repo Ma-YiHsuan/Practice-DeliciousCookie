@@ -11,6 +11,7 @@ const app = createApp({
 			footerList: ['常見Q&A', '關於我們', '意見回報', '合作提案', '服務條款'],
 			headerList: ['home', 'story', 'products', 'news', 'stores'],
 			isSmallPage: false,
+			isPhone: false,
 		};
 	},
 	computed: {
@@ -23,11 +24,7 @@ const app = createApp({
 	},
 	mounted() {
 		window.addEventListener('scroll', this.scrollHandler);
-		if (window.innerWidth <= 1024) {
-			this.isSmallPage = true;
-		} else {
-			this.isSmallPage = false;
-		}
+		this.resizeHandler();
 		window.addEventListener('resize', this.resizeHandler);
 	},
 	methods: {
@@ -38,8 +35,13 @@ const app = createApp({
 		resizeHandler() {
 			if (window.innerWidth <= 1024) {
 				this.isSmallPage = true;
+				this.isPhone = false;
+				if (window.innerWidth <= 768) {
+					this.isPhone = true;
+				}
 			} else {
 				this.isSmallPage = false;
+				this.isPhone = false;
 			}
 		},
 	},

@@ -1,12 +1,16 @@
 const carouselComp = {
+	props: {
+		isphone: {
+			type: Boolean,
+			required: true,
+		},
+	},
 	data() {
 		return {
 			isShow: false,
 			transMove: 'fade',
 			curIndex: 0,
 			direction: 1,
-			isPage: false,
-			isPhone: false,
 			cards: [
 				{
 					id: 1,
@@ -33,7 +37,7 @@ const carouselComp = {
 			<span class="carousel-heading--num">{{ curIndex + 1 }}/{{ cards.length }}</span>
 		</h3>
 		<span class="dli-chevron-left carousel-butLeft" @click="slide(-1)"></span>
-		<div class="carousel-box" v-show="isPhone" v-cloak>
+		<div class="carousel-box" v-show="isphone" v-cloak>
 			<transition :name="transMove">
 				<div class="carousel-content" v-if="isShow" :key="curIndex">
 					<p>{{ cards[curIndex].id }}</p>
@@ -41,7 +45,7 @@ const carouselComp = {
 				</div>
 			</transition>
 		</div>
-		<transition-group :name="transMove" tag="div" class="carousel-box" v-show="isPage" v-cloak>
+		<transition-group :name="transMove" tag="div" class="carousel-box" v-show="!isphone" v-cloak>
 			<div class="carousel-content-prev" v-if="isShow" :key="prevIndex">
 				<p>{{ cards[prevIndex].id }}</p>
 				<p>{{ cards[prevIndex].text }}</p>
@@ -69,14 +73,6 @@ const carouselComp = {
 	},
 	mounted() {
 		this.isShow = true;
-		if (window.innerWidth <= 768) {
-			this.isPhone = true;
-			this.isPage = false;
-		} else {
-			this.isPhone = false;
-			this.isPage = true;
-		}
-		window.addEventListener('resize', this.resizeHandler);
 	},
 	methods: {
 		slide(dir) {
@@ -89,15 +85,6 @@ const carouselComp = {
 			let len = this.cards.length;
 			// http://stackoverflow.com/q/4467539
 			this.curIndex = (this.curIndex + (dir % len) + len) % len;
-		},
-		resizeHandler() {
-			if (window.innerWidth <= 768) {
-				this.isPhone = true;
-				this.isPage = false;
-			} else {
-				this.isPhone = false;
-				this.isPage = true;
-			}
 		},
 	},
 };
