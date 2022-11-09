@@ -30,7 +30,7 @@
  - 以 JavaScript 寫出跟參考網頁同樣的互動效果。
 ### 技術使用
  - 監聽 window scroll 事件。
- - 以 Vue watch 以及 **[tween.js](https://github.com/tweenjs/tween.js/)** 完成動態效果。
+ - 以 requestAnimationFrame 完成動態效果。
  
 **檔案位置：** js/scrollPic.js
 
