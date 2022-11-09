@@ -1,41 +1,34 @@
 const scrollPicComp = {
-	props: ['scrollpos', 'startpoint'],
 	data() {
 		return {
-			translateY: '-50',
+			scrollTarget: undefined,
+			startPoint: 0,
+			translateY: 0,
 		};
 	},
 	template: `
-        <div class="picWithText-Picstyle" :style="{ transform: 'translate3d('+ '0px,' + translateY + 'px, 0px)' }"></div>
+        <div class="picWithText-Picstyle" :style="{ transform: 'translate(' + '0px,' + translateY + 'px)' }"></div>
     `,
-	watch: {
-		scrollpos(newValue, oldValue) {
-			const newP = newValue / 10;
-			const oldP = oldValue / 10;
-			this.tween(oldP.toFixed(3), newP.toFixed(3));
-		},
+	mounted() {
+		this.scrollTarget = document.querySelector('#scrollTarget');
+		window.addEventListener('scroll', this.scrollHandler);
 	},
 	methods: {
-		tween(start, end) {
+		scrollHandler() {
+			this.startPoint = this.scrollTarget.getBoundingClientRect().top;
+			let duration = this.startPoint / 3;
 			const vm = this;
 			function animate() {
-				requestAnimationFrame(animate);
-				TWEEN.update();
+				if (vm.startPoint < 0) {
+					vm.translateY = duration;
+				} else {
+					vm.translateY = 0;
+				}
+				if (duration < -400) {
+					vm.translateY = -400;
+				}
 			}
 			requestAnimationFrame(animate);
-
-			new TWEEN.Tween({ y: start })
-				.to({ y: end }, 1)
-				.onUpdate(function (obj) {
-					if (vm.startpoint < 0) {
-						if (obj.y < -500) {
-							vm.translateY = '-500';
-						} else {
-							vm.translateY = obj.y.toFixed(3);
-						}
-					}
-				})
-				.start();
 		},
 	},
 };

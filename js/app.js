@@ -6,8 +6,6 @@ import { hamburComponent } from './hamburger.js';
 const app = createApp({
 	data() {
 		return {
-			scrollPos: 0,
-			startPoint: 895,
 			footerList: ['常見Q&A', '關於我們', '意見回報', '合作提案', '服務條款'],
 			headerList: ['home', 'story', 'products', 'news', 'stores'],
 			isSmallPage: false,
@@ -23,15 +21,10 @@ const app = createApp({
 		},
 	},
 	mounted() {
-		window.addEventListener('scroll', this.scrollHandler);
 		this.resizeHandler();
 		window.addEventListener('resize', this.resizeHandler);
 	},
 	methods: {
-		scrollHandler() {
-			this.scrollPos = document.body.getBoundingClientRect().top;
-			this.startPoint = this.$refs.scrollTarget.getBoundingClientRect().top;
-		},
 		resizeHandler() {
 			if (window.innerWidth <= 1024) {
 				this.isSmallPage = true;
